@@ -1,0 +1,145 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/static/Bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 10px 0;
+}
+
+header .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Enable wrapping for responsiveness */
+}
+
+header img {
+    height: 50px;
+    margin-bottom: 10px; /* Add some spacing for small screens */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap; /* Allow navigation items to wrap */
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Container and form */
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.upload-section {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%; /* Take full width on small screens */
+    margin: 10px;
+}
+
+#upload {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#upload:hover {
+    background: #555;
+}
+
+/* Results section */
+.results-section {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.results-section p {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(51, 51, 51, 0.8);
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-direction: column; /* Stack nav links vertically */
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .upload-section {
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        height: 40px; /* Reduce logo size */
+    }
+
+    #upload {
+        padding: 8px 16px; /* Adjust button size */
+    }
+}
